@@ -6,7 +6,7 @@ export default {
   args,
   component: SpinnerWheel,
   title: "Views/Spinner/Spinner Wheel",
-  parameters
+  // parameters
 };
 
 export const Example = (wheel: SpinnerWheelProps) => ({

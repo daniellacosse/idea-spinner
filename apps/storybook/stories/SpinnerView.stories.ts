@@ -11,7 +11,7 @@ export default {
   },
   component: Spinner,
   title: "Views/Spinner",
-  parameters
+  // parameters
 };
 
 export const Example = ({
