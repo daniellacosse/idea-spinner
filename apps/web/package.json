@@ -15,6 +15,7 @@
     "@typescript-eslint/parser": "^5.22.0",
     "@typescript-eslint/utils": "^5.22.0",
     "@vitejs/plugin-vue": "^3.0.1",
+    "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/runtime-dom": "^3.2.33",
     "@vue/test-utils": "^2.0.0-rc.21",
     "@vue/vue3-jest": "^28",
@@ -43,12 +44,13 @@
     "tslib": "^2.4.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.2",
-    "vue-eslint-parser": "^9.0.2"
+    "vue-eslint-parser": "^9.0.2",
+    "vue-tsc": "^0.39.0"
   },
   "source": "src/index.html",
   "name": "@idea-spinner/web",
   "scripts": {
-    "build": "vite build",
+    "build": "vue-tsc --noEmit && vite build",
     "lint": "concurrently -n eslint,stylelint 'eslint src --ext ts,vue' 'stylelint \"**/*.vue\"'",
     "start": "vite",
     "test": "jest .",

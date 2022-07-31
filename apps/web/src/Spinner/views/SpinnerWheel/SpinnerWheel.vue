@@ -23,10 +23,16 @@
     }
   );
 
-  defineEmits(["edit", "lock", "unlock"]);
+  const emit = defineEmits(["edit", "lock", "unlock"]);
 
   function clearChange() {
     isAnimating.value = false;
+  }
+
+  function handleEdit({ target }: Event) {
+    const { value } = target as HTMLInputElement;
+
+    emit("edit", { value });
   }
 </script>
 
@@ -75,7 +81,7 @@
         :size="value?.length ?? displayEmptyValue.length"
         :value="value ?? displayEmptyValue"
         :disabled="value === undefined || isSpinning"
-        @input="$emit('edit', { value: $event.target?.value })"
+        @input="handleEdit"
         ref="input"
       />
     </button>

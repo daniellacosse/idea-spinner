@@ -11,5 +11,8 @@
     "plugin": "typedoc-plugin-markdown",
     "publicPath": "https://github.com/daniellacosse/idea-spinner/tree/main/packages/spinner/docs/",
     "readme": "none"
-  }
+  },
+  "exclude": [
+    "coverage"
+  ]
 }
